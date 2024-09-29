@@ -44,7 +44,7 @@ fn line_to_words(line: &str) -> Vec<String> {
 async fn howlongtobeat(game: String) -> Result<Vec<Game>, reqwest::Error> {
     // Post request to howlongtobeat
     let response: serde_json::Value = reqwest::Client::new()
-        .post("https://www.howlongtobeat.com/api/search")
+        .post("https://www.howlongtobeat.com/api/search/21fda17e4a1d49be")
         .json(&serde_json::json!(
             {
                 "searchType": "games",
